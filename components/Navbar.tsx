@@ -16,11 +16,14 @@ const Navbar: FC = () => {
       <Link href="/">
         <a>Home</a>
       </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
       <Link href="/employee">
         <a>Employee List</a>
+      </Link>
+      <Link href="/blog">
+        <a>Blog</a>
+      </Link>
+      <Link href="/about">
+        <a>About</a>
       </Link>
     </nav>
   );
