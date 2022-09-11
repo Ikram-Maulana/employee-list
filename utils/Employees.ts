@@ -11,17 +11,6 @@ export async function getAllEmployeesData() {
   }
 }
 
-export async function getListId() {
-  try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 export async function getEmployeeData(id: string | string[] | undefined) {
   try {
     const response = await axios.get(

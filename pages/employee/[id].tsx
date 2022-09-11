@@ -1,16 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { FC } from "react";
-import { getEmployeeData, getListId } from "../../utils/Employees";
+import { getAllEmployeesData, getEmployeeData } from "../../utils/Employees";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await getListId();
+  const res = await getAllEmployeesData();
 
-  const paths = res.map((employee: { id: number }) => {
-    return {
-      params: { id: employee.id.toString() },
-    };
-  });
+  const paths = res.map((employee: { id: number }) => ({
+    params: { id: employee.id.toString() },
+  }));
 
   return {
     paths,
@@ -19,8 +17,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id: string | string[] | undefined = params?.id;
-  const res = await getEmployeeData(id);
+  const res = await getEmployeeData(params?.id);
 
   return {
     props: {
