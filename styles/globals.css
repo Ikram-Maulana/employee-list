@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#f2f2f2] text-[#333] font-sans max-w-4xl mx-auto;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+a {
+  @apply text-[#333] no-underline;
+}
+
+.content {
+  @apply flex flex-col min-h-screen;
+}
+
+main {
+  @apply flex-1;
+}
+
+nav {
+  @apply mt-3 mx-auto mb-20 py-3 px-0 w-full flex justify-end items-end border-b border-[#ddd];
+}
+
+nav a {
+  @apply ml-3;
+}
+
+nav .logo {
+  @apply mr-auto;
+}
+
+footer {
+  @apply block text-center py-8 px-0 mt-16 text-[#777] border-t border-[#eaeaea];
+}
+
+.about h1,
+.not-found h1 {
+  @apply pb-5;
+}
+
+.not-found {
+  @apply text-center;
+}
+
+.not-found a {
+  @apply text-[#4979ff];
+}
+
+.not-found h2 {
+  @apply font-bold pb-5 text-2xl;
+}

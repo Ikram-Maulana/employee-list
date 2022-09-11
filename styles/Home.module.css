@@ -1,0 +1,11 @@
+.title {
+  @apply text-[#333] pb-5 text-center;
+}
+
+.text {
+  @apply text-[#777];
+}
+
+.btn {
+  @apply block w-44 py-2 px-0 my-5 mx-auto bg-[#4979ff] rounded-md text-white text-center;
+}
